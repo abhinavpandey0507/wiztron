@@ -116,10 +116,8 @@
     });
   }
 
-  // Mission-control preloader
+  // Mission-control preloader — jet flyby
   var preloader = document.getElementById("preloader");
-  var preloaderFill = document.getElementById("preloaderFill");
-  var preloaderPct = document.getElementById("preloaderPct");
   var preloaderStatus = document.getElementById("preloaderStatus");
   var statusSteps = [
     [8, "ESTABLISHING UPLINK"],
@@ -137,7 +135,7 @@
   if (preloader && !reduceMotion.matches) {
     document.body.classList.add("is-loading");
     var preStart = null;
-    var preDur = 1600;
+    var preDur = 1700;
     function pad3(n) {
       var s = String(n);
       while (s.length < 3) s = "0" + s;
@@ -148,8 +146,6 @@
       var p = Math.min((ts - preStart) / preDur, 1);
       var eased = 1 - Math.pow(1 - p, 2);
       var val = Math.round(eased * 100);
-      if (preloaderFill) preloaderFill.style.width = val + "%";
-      if (preloaderPct) preloaderPct.textContent = pad3(val) + "%";
       for (var i = 0; i < statusSteps.length; i++) {
         if (val >= statusSteps[i][0] && preloaderStatus) {
           preloaderStatus.textContent = statusSteps[i][1];
