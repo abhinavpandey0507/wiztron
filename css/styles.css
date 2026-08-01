@@ -283,7 +283,7 @@ body.is-loading {
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -22px;
+  margin-top: -16px;
   display: flex;
   align-items: center;
   animation: jetFly 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards;
@@ -304,8 +304,9 @@ body.is-loading {
 }
 
 .preloader-jet {
-  width: 84px;
-  height: auto;
+  display: block;
+  width: 92px;
+  height: 31px;
   margin-left: -6px;
   color: #fff;
   filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.7))
