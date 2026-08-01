@@ -272,28 +272,21 @@
     }
   }
 
-  // Custom cursor (astronaut)
-  var cursorAst = document.getElementById("cursorAstronaut");
+  // Custom cursor (reticle)
+  var cursorDot = document.getElementById("cursorDot");
   var cursorRing = document.getElementById("cursorRing");
-  if (cursorAst && cursorRing && canAnimate) {
+  if (cursorDot && cursorRing && canAnimate) {
     document.body.classList.add("has-custom-cursor");
     var cdx = 0, cdy = 0, crx = 0, cry = 0, cmx = 0, cmy = 0;
-    var lastDx = 0, lastDy = 0;
     var hotTargets =
       "a, button, input, textarea, .domain-card, .pillar-card, .lead-card, .stat, .gallery-item, .back-top";
     function cursorLoop() {
-      var dx = cmx - cdx;
-      var dy = cmy - cdy;
-      lastDx = lastDx * 0.7 + dx * 0.3;
-      lastDy = lastDy * 0.7 + dy * 0.3;
-      cdx += dx * 0.5;
-      cdy += dy * 0.5;
+      cdx += (cmx - cdx) * 0.5;
+      cdy += (cmy - cdy) * 0.5;
       crx += (cmx - crx) * 0.2;
       cry += (cmy - cry) * 0.2;
-      var lean = Math.max(-0.5, Math.min(0.5, lastDx * 0.012));
-      var flip = lastDx < 0 ? " scaleX(-1)" : "";
-      cursorAst.style.transform =
-        "translate3d(" + (cdx - 18) + "px," + (cdy - 20) + "px,0) rotate(" + (lean * 50).toFixed(1) + "deg)" + flip;
+      cursorDot.style.transform =
+        "translate3d(" + (cdx - 3.5) + "px," + (cdy - 3.5) + "px,0)";
       cursorRing.style.transform =
         "translate3d(" + (crx - 18) + "px," + (cry - 18) + "px,0)";
       requestAnimationFrame(cursorLoop);
@@ -305,7 +298,6 @@
     document.addEventListener("mouseover", function (e) {
       var on = e.target.closest ? !!e.target.closest(hotTargets) : false;
       cursorRing.classList.toggle("active", on);
-      cursorAst.classList.toggle("active", on);
     });
     requestAnimationFrame(cursorLoop);
   }
