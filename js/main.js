@@ -135,7 +135,7 @@
   if (preloader && !reduceMotion.matches) {
     document.body.classList.add("is-loading");
     var preStart = null;
-    var preDur = 2900;
+    var preDur = 1500;
     function pad3(n) {
       var s = String(n);
       while (s.length < 3) s = "0" + s;

@@ -268,14 +268,14 @@ body.is-loading {
     rgba(96, 165, 250, 0.85)
   );
   filter: blur(1.5px);
-  animation: trailFade 4.6s ease forwards;
+  animation: trailFade 2.8s ease forwards;
 }
 
 @keyframes trailFade {
   0%   { transform: scaleX(0); opacity: 0; }
-  15%  { transform: scaleX(0.12); opacity: 0.95; }
-  60%  { transform: scaleX(0.78); opacity: 0.95; }
-  72%  { transform: scaleX(1); opacity: 0.9; }
+  12%  { transform: scaleX(0.08); opacity: 0.95; }
+  50%  { transform: scaleX(0.72); opacity: 0.95; }
+  60%  { transform: scaleX(1); opacity: 0.9; }
   100% { transform: scaleX(1); opacity: 0; }
 }
 
@@ -283,10 +283,10 @@ body.is-loading {
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -26px;
+  margin-top: -22px;
   display: flex;
   align-items: center;
-  animation: jetFly 3s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+  animation: jetFly 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards;
   will-change: transform;
 }
 
@@ -304,19 +304,27 @@ body.is-loading {
 }
 
 .preloader-jet {
-  width: 48px;
-  height: 48px;
+  width: 84px;
+  height: auto;
   margin-left: -6px;
   color: #fff;
-  transform: rotate(90deg);
-  filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.85))
-    drop-shadow(0 0 26px rgba(139, 92, 246, 0.4));
+  filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.7))
+    drop-shadow(0 0 24px rgba(139, 92, 246, 0.35));
   animation: jetBob 0.6s ease-in-out infinite alternate;
 }
 
 @keyframes jetBob {
-  from { transform: rotate(90deg) translateY(0); }
-  to { transform: rotate(90deg) translateY(-3px); }
+  from { transform: translateY(0); }
+  to { transform: translateY(-2px); }
+}
+
+.jet-glow {
+  animation: jetGlow 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes jetGlow {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
 }
 
 .preloader-status {
@@ -350,7 +358,7 @@ body.is-loading {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .preloader-trail, .preloader-fly, .preloader-jet, .preloader-status::after {
+  .preloader-trail, .preloader-fly, .preloader-jet, .jet-glow, .preloader-status::after {
     animation: none;
   }
 }
