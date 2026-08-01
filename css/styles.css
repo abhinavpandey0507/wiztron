@@ -252,55 +252,39 @@ body.is-loading {
   pointer-events: none;
 }
 
-.preloader-trail {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 3px;
-  height: 100vh;
-  margin-left: -1.5px;
-  transform: scaleY(0);
-  transform-origin: bottom center;
-  background: linear-gradient(
-    180deg,
-    rgba(96, 165, 250, 0.7),
-    rgba(96, 165, 250, 0.25) 45%,
-    transparent
-  );
-  filter: blur(1.5px);
-  animation: trailRise 2.8s ease forwards;
-}
-
-@keyframes trailRise {
-  0%   { transform: scaleY(0); opacity: 0; }
-  15%  { transform: scaleY(0.2); opacity: 0.95; }
-  55%  { transform: scaleY(0.75); opacity: 0.95; }
-  62%  { transform: scaleY(1); opacity: 0.85; }
-  100% { transform: scaleY(1); opacity: 0; }
-}
-
 .preloader-fly {
   position: absolute;
-  left: 50%;
-  bottom: -80px;
-  margin-left: -16px;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
   display: flex;
   align-items: center;
-  animation: jetLiftoff 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+  animation: jetFly 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards;
   will-change: transform;
 }
 
-@keyframes jetLiftoff {
-  0%   { transform: translateY(0) rotate(-90deg); }
-  100% { transform: translateY(calc(-100vh - 260px)) rotate(-90deg); }
+@keyframes jetFly {
+  0% { transform: translateX(-320px); }
+  100% { transform: translateX(calc(100vw + 60px)); }
 }
 
 .contrail {
-  width: 240px;
-  height: 4px;
+  width: 180px;
+  height: 6px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.5));
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(245, 183, 60, 0.15) 45%,
+    rgba(245, 183, 60, 0.7) 100%
+  );
   filter: blur(2px);
+  animation: contrailFlick 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes contrailFlick {
+  from { opacity: 0.75; }
+  to { opacity: 1; }
 }
 
 .preloader-jet {
@@ -359,7 +343,7 @@ body.is-loading {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .preloader-trail, .preloader-fly, .preloader-jet, .jet-glow, .preloader-status::after {
+  .preloader-fly, .preloader-jet, .jet-glow, .contrail, .preloader-status::after {
     animation: none;
   }
 }
