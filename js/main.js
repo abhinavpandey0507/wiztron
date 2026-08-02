@@ -173,7 +173,7 @@
   if (spaceCanvas && spaceCanvas.getContext) {
     var ctx = spaceCanvas.getContext("2d");
     var SW = 0, SH = 0;
-    var SDPR = Math.min(window.devicePixelRatio || 1, 2);
+    var SDPR = Math.min(window.devicePixelRatio || 1, 1.5);
     var stars = [];
     var shooting = [];
     var spaceMouseX = 0, spaceMouseY = 0;
@@ -271,24 +271,6 @@
     } else {
       drawSpace();
     }
-  }
-
-  // Custom cursor glow (desktop, mouse only)
-  var glow = document.getElementById("cursorGlow");
-  if (glow && canAnimate) {
-    document.body.classList.add("has-glow");
-    var gx = 0, gy = 0, tx = 0, ty = 0, glowRaf = null;
-    function glowLoop() {
-      gx += (tx - gx) * 0.12;
-      gy += (ty - gy) * 0.12;
-      glow.style.transform = "translate3d(" + gx + "px," + gy + "px,0)";
-      glowRaf = requestAnimationFrame(glowLoop);
-    }
-    document.addEventListener("mousemove", function (e) {
-      tx = e.clientX;
-      ty = e.clientY;
-      if (!glowRaf) glowRaf = requestAnimationFrame(glowLoop);
-    });
   }
 
   // Hero parallax — orbs, starfield, orbit rings drift with the mouse
