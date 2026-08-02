@@ -126,58 +126,6 @@ body {
 }
 
 /* ------------------------------------------------------------
-   CUSTOM CURSOR
-   ------------------------------------------------------------ */
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  border-radius: 50%;
-  z-index: 10001;
-  opacity: 0;
-}
-
-body.has-custom-cursor .cursor-dot,
-body.has-custom-cursor .cursor-ring {
-  opacity: 1;
-}
-
-.cursor-dot {
-  width: 7px;
-  height: 7px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(96, 165, 250, 0.9);
-}
-
-.cursor-ring {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(96, 165, 250, 0.8);
-  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease,
-    background 0.25s ease;
-  mix-blend-mode: screen;
-}
-
-.cursor-ring.active {
-  width: 56px;
-  height: 56px;
-  border-color: rgba(245, 183, 60, 0.9);
-  background: rgba(245, 183, 60, 0.08);
-}
-
-body.has-custom-cursor {
-  cursor: none;
-}
-body.has-custom-cursor a,
-body.has-custom-cursor button,
-body.has-custom-cursor input,
-body.has-custom-cursor textarea {
-  cursor: none;
-}
-
-/* ------------------------------------------------------------
    BACK TO TOP ROCKET
    ------------------------------------------------------------ */
 .back-top {
@@ -393,6 +341,12 @@ ul {
 ::selection {
   background: rgba(56, 130, 246, 0.35);
   color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar {
@@ -906,6 +860,8 @@ body.loaded .hero-content > * {
 }
 
 .hero-tagline {
+  font-family: "Roboto", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   font-size: clamp(1.1rem, 3vw, 1.7rem);
   font-weight: 700;
   letter-spacing: 0.42em;
@@ -994,11 +950,10 @@ body.loaded .hero-content > * {
 }
 
 .marquee-text {
-  font-family: "Monument Extended", sans-serif;
-  font-weight: 800;
+  font-family: "Roboto", "Inter", sans-serif;
+  font-weight: 900;
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.15);
-  text-stroke: 1px #2b2b2b;
   font-size: clamp(1.5rem, 4vw, 3rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2023,6 +1978,10 @@ radial-gradient(560px circle at 90% 30%, var(--violet-glow), transparent 62%),
 @media (max-width: 480px) {
   .about-stats {
     grid-template-columns: 1fr;
+  }
+
+  .hero-tagline {
+    letter-spacing: 0.26em;
   }
 
   .domain-grid {

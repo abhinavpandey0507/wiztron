@@ -60,7 +60,12 @@
     var pos = window.scrollY + 140;
     var current = "home";
     spySections.forEach(function (sec) {
-      if (pos >= sec.offsetTop) current = sec.id;
+      if (
+        pos >= sec.offsetTop &&
+        document.querySelector('.nav-links a[href="#' + sec.id + '"]')
+      ) {
+        current = sec.id;
+      }
     });
     spyLinks.forEach(function (link) {
       link.classList.toggle("active", link.getAttribute("href") === "#" + current);
@@ -268,37 +273,7 @@
     }
   }
 
-  // Custom cursor (reticle)
-  var cursorDot = document.getElementById("cursorDot");
-  var cursorRing = document.getElementById("cursorRing");
-  if (cursorDot && cursorRing && canAnimate) {
-    document.body.classList.add("has-custom-cursor");
-    var cdx = 0, cdy = 0, crx = 0, cry = 0, cmx = 0, cmy = 0;
-    var hotTargets =
-      "a, button, input, textarea, .domain-card, .pillar-card, .lead-card, .stat, .gallery-item, .back-top";
-    function cursorLoop() {
-      cdx += (cmx - cdx) * 0.5;
-      cdy += (cmy - cdy) * 0.5;
-      crx += (cmx - crx) * 0.2;
-      cry += (cmy - cry) * 0.2;
-      cursorDot.style.transform =
-        "translate3d(" + (cdx - 3.5) + "px," + (cdy - 3.5) + "px,0)";
-      cursorRing.style.transform =
-        "translate3d(" + (crx - 18) + "px," + (cry - 18) + "px,0)";
-      requestAnimationFrame(cursorLoop);
-    }
-    document.addEventListener("mousemove", function (e) {
-      cmx = e.clientX;
-      cmy = e.clientY;
-    });
-    document.addEventListener("mouseover", function (e) {
-      var on = e.target.closest ? !!e.target.closest(hotTargets) : false;
-      cursorRing.classList.toggle("active", on);
-    });
-    requestAnimationFrame(cursorLoop);
-  }
-
-  // Cursor glow (desktop, mouse only)
+  // Custom cursor glow (desktop, mouse only)
   var glow = document.getElementById("cursorGlow");
   if (glow && canAnimate) {
     document.body.classList.add("has-glow");
