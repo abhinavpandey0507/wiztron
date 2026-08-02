@@ -273,6 +273,36 @@
     }
   }
 
+  // Custom cursor (reticle)
+  var cursorDot = document.getElementById("cursorDot");
+  var cursorRing = document.getElementById("cursorRing");
+  if (cursorDot && cursorRing && canAnimate) {
+    document.body.classList.add("has-custom-cursor");
+    var cdx = 0, cdy = 0, crx = 0, cry = 0, cmx = 0, cmy = 0;
+    var hotTargets =
+      "a, button, input, textarea, .domain-card, .pillar-card, .lead-card, .stat, .gallery-item, .back-top";
+    function cursorLoop() {
+      cdx += (cmx - cdx) * 0.5;
+      cdy += (cmy - cdy) * 0.5;
+      crx += (cmx - crx) * 0.2;
+      cry += (cmy - cry) * 0.2;
+      cursorDot.style.transform =
+        "translate3d(" + (cdx - 3.5) + "px," + (cdy - 3.5) + "px,0)";
+      cursorRing.style.transform =
+        "translate3d(" + (crx - 19) + "px," + (cry - 19) + "px,0)";
+      requestAnimationFrame(cursorLoop);
+    }
+    document.addEventListener("mousemove", function (e) {
+      cmx = e.clientX;
+      cmy = e.clientY;
+    });
+    document.addEventListener("mouseover", function (e) {
+      var on = e.target.closest ? !!e.target.closest(hotTargets) : false;
+      cursorRing.classList.toggle("active", on);
+    });
+    requestAnimationFrame(cursorLoop);
+  }
+
   // Hero parallax — orbs, starfield, orbit rings drift with the mouse
   var heroBg = document.querySelector(".hero-bg");
   var orbitGraphic = document.querySelector(".orbit-graphic");

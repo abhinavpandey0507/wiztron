@@ -91,6 +91,87 @@ body {
   pointer-events: none;
 }
 
+/* global colour-grade nebula behind everything */
+.nebula {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(58vw 58vw at 82% -8%, rgba(139, 92, 246, 0.13), transparent 62%),
+    radial-gradient(46vw 46vw at 4% 26%, rgba(59, 130, 246, 0.12), transparent 60%),
+    radial-gradient(64vw 64vw at 70% 106%, rgba(245, 183, 60, 0.07), transparent 62%),
+    radial-gradient(42vw 42vw at 46% 52%, rgba(56, 189, 248, 0.05), transparent 60%),
+    #030408;
+}
+
+/* ------------------------------------------------------------
+   CUSTOM CURSOR
+   ------------------------------------------------------------ */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 10001;
+  opacity: 0;
+  will-change: transform;
+}
+
+body.has-custom-cursor .cursor-dot,
+body.has-custom-cursor .cursor-ring {
+  opacity: 1;
+}
+
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.9);
+}
+
+.cursor-ring {
+  width: 38px;
+  height: 38px;
+  background: conic-gradient(
+    from 20deg,
+    #3b82f6,
+    #8b5cf6 50%,
+    #f5b73c,
+    #3b82f6
+  );
+  -webkit-mask: radial-gradient(circle, transparent 64%, #000 66%);
+  mask: radial-gradient(circle, transparent 64%, #000 66%);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px rgba(96, 165, 250, 0.7));
+  transition: width 0.25s ease, height 0.25s ease, filter 0.25s ease;
+}
+
+.cursor-ring.active {
+  width: 58px;
+  height: 58px;
+  background: conic-gradient(
+    from 20deg,
+    #f5b73c,
+    #ffd98a 50%,
+    #ff9d3c,
+    #f5b73c
+  );
+  filter: drop-shadow(0 0 10px rgba(245, 183, 60, 0.8));
+}
+
+body.has-custom-cursor {
+  cursor: none;
+}
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor input,
+body.has-custom-cursor textarea {
+  cursor: none;
+}
+
 /* ------------------------------------------------------------
    BACK TO TOP ROCKET
    ------------------------------------------------------------ */
@@ -322,12 +403,12 @@ ul {
   background: #000;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #1d2430, #101317);
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.55), rgba(139, 92, 246, 0.55) 55%, rgba(245, 183, 60, 0.55));
   border-radius: 5px;
   border: 2px solid #000;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a3442;
+  background: linear-gradient(180deg, rgba(96, 165, 250, 0.8), rgba(167, 139, 250, 0.8) 55%, rgba(255, 199, 90, 0.8));
 }
 
 /* ------------------------------------------------------------
@@ -542,7 +623,7 @@ ul {
 .aurora-a {
   width: 720px;
   height: 720px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.5), transparent 70%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.5), rgba(56, 189, 248, 0.16) 45%, transparent 70%);
   top: -220px;
   left: -180px;
 }
@@ -550,7 +631,7 @@ ul {
 .aurora-b {
   width: 640px;
   height: 640px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.42), transparent 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.42), rgba(217, 70, 239, 0.14) 45%, transparent 70%);
   top: 24%;
   right: -200px;
   animation-delay: -6s;
@@ -559,7 +640,7 @@ ul {
 .aurora-c {
   width: 620px;
   height: 620px;
-  background: radial-gradient(circle, rgba(245, 183, 60, 0.34), transparent 70%);
+  background: radial-gradient(circle, rgba(245, 183, 60, 0.34), rgba(251, 146, 60, 0.12) 45%, transparent 70%);
   bottom: -240px;
   left: 24%;
   animation-delay: -12s;
