@@ -222,7 +222,7 @@
         var alpha = 0.3 + 0.7 * Math.abs(Math.sin(s.tw));
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(214,228,255," + alpha.toFixed(2) + ")";
+        ctx.fillStyle = "rgba(211,214,224," + alpha.toFixed(2) + ")";
         ctx.fill();
       }
       nextShoot -= 1;
@@ -247,9 +247,9 @@
         }
         var head = Math.max(m.life, 0);
         var grad = ctx.createLinearGradient(m.x, m.y, m.x - m.vx * 7, m.y - m.vy * 7);
-        grad.addColorStop(0, "rgba(255,255,255," + head.toFixed(2) + ")");
-        grad.addColorStop(0.4, "rgba(96,165,250," + (head * 0.7).toFixed(2) + ")");
-        grad.addColorStop(1, "rgba(96,165,250,0)");
+        grad.addColorStop(0, "rgba(238,238,238," + head.toFixed(2) + ")");
+        grad.addColorStop(0.4, "rgba(156,192,255," + (head * 0.7).toFixed(2) + ")");
+        grad.addColorStop(1, "rgba(156,192,255,0)");
         ctx.strokeStyle = grad;
         ctx.lineWidth = 1.6;
         ctx.beginPath();

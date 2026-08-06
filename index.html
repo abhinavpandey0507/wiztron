@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="theme-color" content="#030408" />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta property="og:title" content="WIZTRON — We Build Together" />
   <meta property="og:description" content="The official tech club of CGC University, Mohali. Technology, Software, Hardware, Robotics, Aeromodelling & more." />
   <meta property="og:type" content="website" />
@@ -37,37 +37,37 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="wmAccentGrad" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#3b82f6"></stop>
-        <stop offset="100%" stop-color="#eab308"></stop>
+        <stop offset="0%" stop-color="#5c9cf5"></stop>
+        <stop offset="100%" stop-color="#fab283"></stop>
       </linearGradient>
       <linearGradient id="rocketNose" x1="0" y1="1" x2="0" y2="0">
-        <stop offset="0%" stop-color="#f5b73c"></stop>
-        <stop offset="100%" stop-color="#ffd98a"></stop>
+        <stop offset="0%" stop-color="#fab283"></stop>
+        <stop offset="100%" stop-color="#ffd9b0"></stop>
       </linearGradient>
       <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#ff9d3c"></stop>
-        <stop offset="55%" stop-color="#ffe14d"></stop>
-        <stop offset="100%" stop-color="rgba(255,225,77,0)"></stop>
+        <stop offset="0%" stop-color="#f5a742"></stop>
+        <stop offset="55%" stop-color="#e5c07b"></stop>
+        <stop offset="100%" stop-color="rgba(229,192,123,0)"></stop>
       </linearGradient>
       <linearGradient id="trailGrad" x1="0" y1="1" x2="1" y2="0">
-        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"></stop>
-        <stop offset="55%" stop-color="#8b5cf6" stop-opacity="0.6"></stop>
-        <stop offset="100%" stop-color="#f5b73c" stop-opacity="0.9"></stop>
+        <stop offset="0%" stop-color="#5c9cf5" stop-opacity="0"></stop>
+        <stop offset="55%" stop-color="#9d7cd8" stop-opacity="0.6"></stop>
+        <stop offset="100%" stop-color="#fab283" stop-opacity="0.9"></stop>
       </linearGradient>
       <g id="rocketShape">
-        <path d="M0 -16 C 4 -9, 8 -1, 8 8 L 8 24 C 8 30, 5 36, 3 39 L -3 39 C -5 36, -8 30, -8 24 L -8 8 C -8 -1, -4 -9, 0 -16 Z" fill="#e8ecf4"></path>
+        <path d="M0 -16 C 4 -9, 8 -1, 8 8 L 8 24 C 8 30, 5 36, 3 39 L -3 39 C -5 36, -8 30, -8 24 L -8 8 C -8 -1, -4 -9, 0 -16 Z" fill="#eeeeee"></path>
         <path d="M0 -16 C 3 -11, 6 -5, 8 0 L -8 0 C -6 -5, -3 -11, 0 -16 Z" fill="url(#rocketNose)"></path>
-        <circle cx="0" cy="12" r="3.6" fill="#3b82f6" stroke="#0b1220" stroke-width="1"></circle>
-        <path d="M-8 20 L -15 37 L -7 37 Z" fill="#8b5cf6"></path>
-        <path d="M8 20 L 15 37 L 7 37 Z" fill="#8b5cf6"></path>
+        <circle cx="0" cy="12" r="3.6" fill="#5c9cf5" stroke="#0a0a0a" stroke-width="1"></circle>
+        <path d="M-8 20 L -15 37 L -7 37 Z" fill="#9d7cd8"></path>
+        <path d="M8 20 L 15 37 L 7 37 Z" fill="#9d7cd8"></path>
         <path d="M-4 39 L 4 39 L 0 54 Z" fill="url(#flameGrad)">
           <animate attributeName="opacity" values="0.55;1;0.55" dur="0.28s" repeatCount="indefinite"></animate>
         </path>
       </g>
       <linearGradient id="heroSheen" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0.3" stop-color="#dbe4f0"></stop>
-        <stop offset="0.5" stop-color="#ffffff"></stop>
-        <stop offset="0.7" stop-color="#dbe4f0"></stop>
+        <stop offset="0.3" stop-color="#d4d4d4"></stop>
+        <stop offset="0.5" stop-color="#eeeeee"></stop>
+        <stop offset="0.7" stop-color="#d4d4d4"></stop>
         <animateTransform attributeName="gradientTransform" type="translate" from="-1.2 0" to="1.2 0" dur="7s" repeatCount="indefinite"></animateTransform>
       </linearGradient>
     </defs>
@@ -80,21 +80,21 @@
     <div class="preloader-fly" aria-hidden="true">
       <span class="contrail"></span>
       <svg class="preloader-jet" viewBox="0 0 120 40" width="92" height="31" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <path d="M28 13 L 22 4 L 9 4.5 L 12 13 Z" fill="#f5f7fb" stroke="#8b9bb1" stroke-width="0.8"></path>
-        <path d="M22 4 L 9 4.5 L 12 8.5 L 18.5 7.5 Z" fill="#e0403a"></path>
-        <rect x="5.5" y="3.2" width="26" height="3.6" rx="1.6" fill="#f5f7fb" stroke="#8b9bb1" stroke-width="0.8"></rect>
-        <path d="M9 21 C 9 14, 20 12, 32 13 L 92 14 C 103 14, 111 17, 116 20 C 112 24, 104 26, 92 26 L 32 25 C 20 25, 9 25, 9 21 Z" fill="#f5f7fb" stroke="#8b9bb1" stroke-width="0.8"></path>
-        <path d="M116 20 C 112 24, 104 26, 92 26 L 92 14 C 103 14, 111 17, 116 20 Z" fill="#e0403a"></path>
-        <path d="M20 21 L 92 21 L 92 23.5 L 20 23.5 Z" fill="#e0403a" opacity="0.9"></path>
-        <path d="M97 13.5 C 94 5.5, 84 5.5, 80 12.5 Z" fill="#7ec3ff" stroke="#2a3a55" stroke-width="0.6" opacity="0.92"></path>
-        <path d="M84.5 13 C 81 6.5, 72.5 6.5, 68.5 12.5 Z" fill="#7ec3ff" stroke="#2a3a55" stroke-width="0.6" opacity="0.92"></path>
-        <path d="M36 14 C 43 14, 51 15.5, 51 21 L 36 20.5 Z" fill="#232a38"></path>
-        <path d="M62 23 L 33 33 L 30 31 L 58 21 Z" fill="#f5f7fb" stroke="#8b9bb1" stroke-width="0.8"></path>
-        <path d="M33 33 L 30 31 L 41 28 Z" fill="#e0403a"></path>
-        <circle cx="71" cy="17.5" r="3.4" fill="#ffffff" stroke="#1d3a6d" stroke-width="1"></circle>
-        <circle cx="71" cy="17.5" r="1.5" fill="#1d3a6d"></circle>
-        <ellipse cx="11" cy="20" rx="4.6" ry="6" fill="#141821"></ellipse>
-        <ellipse class="jet-glow" cx="11" cy="20" rx="2.6" ry="3.6" fill="#f5b73c"></ellipse>
+        <path d="M28 13 L 22 4 L 9 4.5 L 12 13 Z" fill="#eeeeee" stroke="#8a8a8a" stroke-width="0.8"></path>
+        <path d="M22 4 L 9 4.5 L 12 8.5 L 18.5 7.5 Z" fill="#e06c75"></path>
+        <rect x="5.5" y="3.2" width="26" height="3.6" rx="1.6" fill="#eeeeee" stroke="#8a8a8a" stroke-width="0.8"></rect>
+        <path d="M9 21 C 9 14, 20 12, 32 13 L 92 14 C 103 14, 111 17, 116 20 C 112 24, 104 26, 92 26 L 32 25 C 20 25, 9 25, 9 21 Z" fill="#eeeeee" stroke="#8a8a8a" stroke-width="0.8"></path>
+        <path d="M116 20 C 112 24, 104 26, 92 26 L 92 14 C 103 14, 111 17, 116 20 Z" fill="#e06c75"></path>
+        <path d="M20 21 L 92 21 L 92 23.5 L 20 23.5 Z" fill="#e06c75" opacity="0.9"></path>
+        <path d="M97 13.5 C 94 5.5, 84 5.5, 80 12.5 Z" fill="#9cc0ff" stroke="#383838" stroke-width="0.6" opacity="0.92"></path>
+        <path d="M84.5 13 C 81 6.5, 72.5 6.5, 68.5 12.5 Z" fill="#9cc0ff" stroke="#383838" stroke-width="0.6" opacity="0.92"></path>
+        <path d="M36 14 C 43 14, 51 15.5, 51 21 L 36 20.5 Z" fill="#2a2a2a"></path>
+        <path d="M62 23 L 33 33 L 30 31 L 58 21 Z" fill="#eeeeee" stroke="#8a8a8a" stroke-width="0.8"></path>
+        <path d="M33 33 L 30 31 L 41 28 Z" fill="#e06c75"></path>
+        <circle cx="71" cy="17.5" r="3.4" fill="#eeeeee" stroke="#2a2a2a" stroke-width="1"></circle>
+        <circle cx="71" cy="17.5" r="1.5" fill="#2a2a2a"></circle>
+        <ellipse cx="11" cy="20" rx="4.6" ry="6" fill="#1e1e1e"></ellipse>
+        <ellipse class="jet-glow" cx="11" cy="20" rx="2.6" ry="3.6" fill="#fab283"></ellipse>
       </svg>
     </div>
     <p class="preloader-status" id="preloaderStatus">INITIALISING UPLINK</p>
@@ -147,90 +147,90 @@
     <svg class="hero-rocket parallax" data-speed="0.1" viewBox="0 0 300 720" aria-hidden="true">
       <defs>
         <linearGradient id="rockBodyGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#cfd8e6"></stop>
-          <stop offset="45%" stop-color="#f4f7fb"></stop>
-          <stop offset="100%" stop-color="#b4bfd1"></stop>
+          <stop offset="0%" stop-color="#cccccc"></stop>
+          <stop offset="45%" stop-color="#eeeeee"></stop>
+          <stop offset="100%" stop-color="#a8a8a8"></stop>
         </linearGradient>
         <linearGradient id="rockFairingGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#e2e9f4"></stop>
-          <stop offset="100%" stop-color="#a9b5c8"></stop>
+          <stop offset="0%" stop-color="#e2e2e2"></stop>
+          <stop offset="100%" stop-color="#9a9a9a"></stop>
         </linearGradient>
         <linearGradient id="rockNozzleGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#2a303c"></stop>
-          <stop offset="100%" stop-color="#0c0e13"></stop>
+          <stop offset="0%" stop-color="#383838"></stop>
+          <stop offset="100%" stop-color="#101010"></stop>
         </linearGradient>
         <linearGradient id="rockFlameGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#ff9d3c"></stop>
-          <stop offset="45%" stop-color="#ffe14d"></stop>
-          <stop offset="100%" stop-color="rgba(255,225,77,0)"></stop>
+          <stop offset="0%" stop-color="#f5a742"></stop>
+          <stop offset="45%" stop-color="#e5c07b"></stop>
+          <stop offset="100%" stop-color="rgba(229,192,123,0)"></stop>
         </linearGradient>
       </defs>
 
       <!-- launch tower -->
       <g class="pad-tower">
-        <rect x="16" y="240" width="9" height="408" fill="#141821"></rect>
-        <rect x="16" y="238" width="26" height="10" fill="#1c2430"></rect>
-        <rect x="25" y="648" width="96" height="7" fill="#0f1219"></rect>
-        <circle class="beacon" cx="20.5" cy="228" r="4" fill="#f5b73c"></circle>
+        <rect x="16" y="240" width="9" height="408" fill="#1e1e1e"></rect>
+        <rect x="16" y="238" width="26" height="10" fill="#282828"></rect>
+        <rect x="25" y="648" width="96" height="7" fill="#141414"></rect>
+        <circle class="beacon" cx="20.5" cy="228" r="4" fill="#fab283"></circle>
       </g>
 
       <!-- pad smoke -->
       <g class="pad-smoke">
-        <ellipse cx="118" cy="650" rx="58" ry="24" fill="rgba(205,220,240,0.14)"></ellipse>
-        <ellipse cx="150" cy="664" rx="86" ry="30" fill="rgba(205,220,240,0.1)"></ellipse>
-        <ellipse cx="188" cy="648" rx="54" ry="22" fill="rgba(205,220,240,0.09)"></ellipse>
-        <ellipse cx="150" cy="676" rx="120" ry="18" fill="rgba(205,220,240,0.07)"></ellipse>
+        <ellipse cx="118" cy="650" rx="58" ry="24" fill="rgba(211,211,211,0.14)"></ellipse>
+        <ellipse cx="150" cy="664" rx="86" ry="30" fill="rgba(211,211,211,0.1)"></ellipse>
+        <ellipse cx="188" cy="648" rx="54" ry="22" fill="rgba(211,211,211,0.09)"></ellipse>
+        <ellipse cx="150" cy="676" rx="120" ry="18" fill="rgba(211,211,211,0.07)"></ellipse>
       </g>
 
       <!-- NASA-style stack: escape tower + capsule + service module + booster -->
       <g class="launch-vehicle">
         <!-- launch escape system -->
-        <path d="M150 46 L148 90 L143 126 L150 126 L157 126 L152 90 Z" fill="#8b93a3"></path>
-        <path d="M143 126 L147 126 L147 158 L143 158 Z" fill="#2a303c"></path>
-        <path d="M157 126 L153 126 L153 158 L157 158 Z" fill="#2a303c"></path>
-        <line x1="146" y1="134" x2="131" y2="176" stroke="#2a303c" stroke-width="3"></line>
-        <line x1="154" y1="134" x2="169" y2="176" stroke="#2a303c" stroke-width="3"></line>
-        <line x1="146" y1="150" x2="139" y2="176" stroke="#2a303c" stroke-width="3"></line>
-        <line x1="154" y1="150" x2="161" y2="176" stroke="#2a303c" stroke-width="3"></line>
+        <path d="M150 46 L148 90 L143 126 L150 126 L157 126 L152 90 Z" fill="#8a8a8a"></path>
+        <path d="M143 126 L147 126 L147 158 L143 158 Z" fill="#383838"></path>
+        <path d="M157 126 L153 126 L153 158 L157 158 Z" fill="#383838"></path>
+        <line x1="146" y1="134" x2="131" y2="176" stroke="#383838" stroke-width="3"></line>
+        <line x1="154" y1="134" x2="169" y2="176" stroke="#383838" stroke-width="3"></line>
+        <line x1="146" y1="150" x2="139" y2="176" stroke="#383838" stroke-width="3"></line>
+        <line x1="154" y1="150" x2="161" y2="176" stroke="#383838" stroke-width="3"></line>
 
         <!-- Orion-style capsule -->
         <path d="M137 176 L131 246 C 131 254, 139 258, 150 258 C 161 258, 169 254, 169 246 L163 176 Z" fill="url(#rockFairingGrad)"></path>
-        <path d="M163 176 L169 246 C 169 254, 161 258, 150 258 L150 176 Z" fill="rgba(255,255,255,0.5)"></path>
+        <path d="M163 176 L169 246 C 169 254, 161 258, 150 258 L150 176 Z" fill="rgba(238,238,238,0.5)"></path>
         <!-- porthole window -->
-        <circle cx="150" cy="204" r="9" fill="#0b1220"></circle>
-        <circle cx="150" cy="204" r="6.5" fill="#1d3a6d"></circle>
-        <path d="M146.5 201.5 A 6.5 6.5 0 0 1 153 199.5" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.85"></path>
+        <circle cx="150" cy="204" r="9" fill="#0a0a0a"></circle>
+        <circle cx="150" cy="204" r="6.5" fill="#2a2a2a"></circle>
+        <path d="M146.5 201.5 A 6.5 6.5 0 0 1 153 199.5" stroke="#eeeeee" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.85"></path>
         <!-- reentry heat shield -->
-        <path d="M131 240 C 131 254, 139 258, 150 258 C 161 258, 169 254, 169 240 L166 236 L134 236 Z" fill="#0e1015"></path>
+        <path d="M131 240 C 131 254, 139 258, 150 258 C 161 258, 169 254, 169 240 L166 236 L134 236 Z" fill="#101010"></path>
 
         <!-- service module -->
         <path d="M136 262 L131 326 C 131 332, 139 335, 150 335 C 161 335, 169 332, 169 326 L164 262 Z" fill="url(#rockNozzleGrad)"></path>
-        <line x1="132" y1="294" x2="168" y2="294" stroke="#0c0e13" stroke-width="2"></line>
+        <line x1="132" y1="294" x2="168" y2="294" stroke="#101010" stroke-width="2"></line>
 
         <!-- interstage + booster core -->
-        <rect x="136" y="335" width="28" height="9" fill="#0b1220"></rect>
+        <rect x="136" y="335" width="28" height="9" fill="#0a0a0a"></rect>
         <rect x="136" y="344" width="28" height="276" fill="url(#rockBodyGrad)"></rect>
-        <line x1="150" y1="344" x2="150" y2="620" stroke="rgba(11,18,32,0.08)" stroke-width="1"></line>
+        <line x1="150" y1="344" x2="150" y2="620" stroke="rgba(20,20,20,0.08)" stroke-width="1"></line>
         <!-- roll-pattern stripes -->
-        <rect x="136" y="360" width="28" height="34" fill="#0b1220"></rect>
-        <rect x="136" y="528" width="28" height="5" fill="#0b1220"></rect>
-        <rect x="136" y="556" width="28" height="5" fill="#0b1220"></rect>
-        <rect x="136" y="584" width="28" height="5" fill="#0b1220"></rect>
+        <rect x="136" y="360" width="28" height="34" fill="#0a0a0a"></rect>
+        <rect x="136" y="528" width="28" height="5" fill="#0a0a0a"></rect>
+        <rect x="136" y="556" width="28" height="5" fill="#0a0a0a"></rect>
+        <rect x="136" y="584" width="28" height="5" fill="#0a0a0a"></rect>
         <!-- vertical mission name -->
-        <rect x="139" y="430" width="22" height="122" fill="#0b1220"></rect>
-        <text x="150" y="505" font-family="'Archivo Black','Arial Black',sans-serif" font-size="12.5" fill="#ffffff" text-anchor="middle" letter-spacing="1.5" transform="translate(150 505) rotate(90)">WIZTRON</text>
-        <rect x="139" y="556" width="22" height="3" fill="#f5b73c"></rect>
+        <rect x="139" y="430" width="22" height="122" fill="#0a0a0a"></rect>
+        <text x="150" y="505" font-family="'Archivo Black','Arial Black',sans-serif" font-size="12.5" fill="#eeeeee" text-anchor="middle" letter-spacing="1.5" transform="translate(150 505) rotate(90)">WIZTRON</text>
+        <rect x="139" y="556" width="22" height="3" fill="#fab283"></rect>
 
         <!-- umbilical swing arms -->
-        <line x1="34" y1="356" x2="136" y2="356" stroke="#1c2430" stroke-width="4"></line>
-        <line x1="34" y1="410" x2="136" y2="410" stroke="#1c2430" stroke-width="4"></line>
-        <rect x="129" y="348" width="9" height="16" fill="#0f1219"></rect>
-        <rect x="129" y="402" width="9" height="16" fill="#0f1219"></rect>
+        <line x1="34" y1="356" x2="136" y2="356" stroke="#282828" stroke-width="4"></line>
+        <line x1="34" y1="410" x2="136" y2="410" stroke="#282828" stroke-width="4"></line>
+        <rect x="129" y="348" width="9" height="16" fill="#141414"></rect>
+        <rect x="129" y="402" width="9" height="16" fill="#141414"></rect>
 
         <!-- swept fins -->
-        <path class="rock-fin" d="M136 555 L122 622 L137 614 Z" fill="#1c2430"></path>
-        <path class="rock-fin" d="M164 555 L178 622 L163 614 Z" fill="#1c2430"></path>
-        <rect x="138" y="618" width="24" height="10" fill="#1c2430"></rect>
+        <path class="rock-fin" d="M136 555 L122 622 L137 614 Z" fill="#282828"></path>
+        <path class="rock-fin" d="M164 555 L178 622 L163 614 Z" fill="#282828"></path>
+        <rect x="138" y="618" width="24" height="10" fill="#282828"></rect>
 
         <!-- engine cluster -->
         <path d="M146 628 L146 660 L154 660 L154 628 Z" fill="url(#rockNozzleGrad)"></path>
@@ -243,10 +243,10 @@
         <path d="M137 660 C 122 700, 140 706, 150 716 C 160 706, 178 700, 163 660 Z" fill="url(#rockFlameGrad)">
           <animate attributeName="opacity" values="0.65;1;0.65" dur="0.34s" repeatCount="indefinite"></animate>
         </path>
-        <path d="M143 660 C 137 688, 148 694, 150 702 C 152 694, 163 688, 157 660 Z" fill="#fff3cc">
+        <path d="M143 660 C 137 688, 148 694, 150 702 C 152 694, 163 688, 157 660 Z" fill="#ffd9b0">
           <animate attributeName="opacity" values="0.7;1;0.7" dur="0.22s" repeatCount="indefinite"></animate>
         </path>
-        <path d="M146 660 C 144 678, 149 686, 150 692 C 151 686, 156 678, 154 660 Z" fill="#ffffff" opacity="0.85">
+        <path d="M146 660 C 144 678, 149 686, 150 692 C 151 686, 156 678, 154 660 Z" fill="#eeeeee" opacity="0.85">
           <animate attributeName="opacity" values="0.5;1;0.5" dur="0.18s" repeatCount="indefinite"></animate>
         </path>
       </g>
@@ -295,41 +295,41 @@
     <svg class="space-station parallax" data-speed="-0.08" viewBox="0 0 420 420" aria-hidden="true">
       <defs>
         <linearGradient id="planetGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#3b82f6"></stop>
-          <stop offset="100%" stop-color="#0b1e3a"></stop>
+          <stop offset="0%" stop-color="#5c9cf5"></stop>
+          <stop offset="100%" stop-color="#1e1e1e"></stop>
         </linearGradient>
         <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#2a3a5a"></stop>
-          <stop offset="100%" stop-color="#182438"></stop>
+          <stop offset="0%" stop-color="#383838"></stop>
+          <stop offset="100%" stop-color="#1e1e1e"></stop>
         </linearGradient>
       </defs>
       <g class="ss-stars">
-        <circle cx="70" cy="40" r="1.2" fill="#fff" opacity="0.7"></circle>
-        <circle cx="150" cy="90" r="1" fill="#fff" opacity="0.5"></circle>
-        <circle cx="300" cy="60" r="1.4" fill="#fff" opacity="0.6"></circle>
-        <circle cx="360" cy="150" r="1" fill="#fff" opacity="0.5"></circle>
-        <circle cx="40" cy="180" r="1" fill="#fff" opacity="0.4"></circle>
+        <circle cx="70" cy="40" r="1.2" fill="#eeeeee" opacity="0.7"></circle>
+        <circle cx="150" cy="90" r="1" fill="#eeeeee" opacity="0.5"></circle>
+        <circle cx="300" cy="60" r="1.4" fill="#eeeeee" opacity="0.6"></circle>
+        <circle cx="360" cy="150" r="1" fill="#eeeeee" opacity="0.5"></circle>
+        <circle cx="40" cy="180" r="1" fill="#eeeeee" opacity="0.4"></circle>
       </g>
-      <ellipse class="ss-orbit" cx="210" cy="330" rx="258" ry="112" fill="none" stroke="rgba(139,92,246,0.28)" stroke-width="1" stroke-dasharray="3 9"></ellipse>
-      <ellipse cx="210" cy="300" rx="196" ry="88" fill="none" stroke="rgba(59,130,246,0.2)" stroke-width="1" stroke-dasharray="2 11"></ellipse>
+      <ellipse class="ss-orbit" cx="210" cy="330" rx="258" ry="112" fill="none" stroke="rgba(157,124,216,0.28)" stroke-width="1" stroke-dasharray="3 9"></ellipse>
+      <ellipse cx="210" cy="300" rx="196" ry="88" fill="none" stroke="rgba(92,156,245,0.2)" stroke-width="1" stroke-dasharray="2 11"></ellipse>
       <circle cx="210" cy="402" r="150" fill="url(#planetGrad)"></circle>
-      <path d="M60 402 a150 150 0 0 1 96 -88 l34 34 a116 116 0 0 0 -76 66 z" fill="rgba(255,255,255,0.06)"></path>
-      <circle cx="210" cy="402" r="152" fill="none" stroke="rgba(96,165,250,0.35)" stroke-width="1.5"></circle>
+      <path d="M60 402 a150 150 0 0 1 96 -88 l34 34 a116 116 0 0 0 -76 66 z" fill="rgba(238,238,238,0.06)"></path>
+      <circle cx="210" cy="402" r="152" fill="none" stroke="rgba(156,192,255,0.35)" stroke-width="1.5"></circle>
       <g class="ss-station">
         <rect x="120" y="92" width="180" height="10" rx="2" fill="url(#panelGrad)"></rect>
         <rect x="152" y="74" width="116" height="8" rx="2" fill="url(#panelGrad)"></rect>
-        <rect x="195" y="102" width="30" height="44" rx="3" fill="#c9d4e4"></rect>
-        <rect x="196" y="114" width="28" height="3" fill="rgba(11,18,32,0.22)"></rect>
-        <rect x="196" y="126" width="28" height="3" fill="rgba(11,18,32,0.22)"></rect>
-        <circle cx="210" cy="150" r="7" fill="#2a303c"></circle>
-        <rect x="196" y="157" width="28" height="18" rx="2" fill="#dfe6f2"></rect>
-        <rect x="150" y="142" width="34" height="10" rx="2" fill="#1c2430"></rect>
-        <rect x="236" y="142" width="34" height="10" rx="2" fill="#1c2430"></rect>
+        <rect x="195" y="102" width="30" height="44" rx="3" fill="#c4c4c4"></rect>
+        <rect x="196" y="114" width="28" height="3" fill="rgba(20,20,20,0.22)"></rect>
+        <rect x="196" y="126" width="28" height="3" fill="rgba(20,20,20,0.22)"></rect>
+        <circle cx="210" cy="150" r="7" fill="#383838"></circle>
+        <rect x="196" y="157" width="28" height="18" rx="2" fill="#d9d9d9"></rect>
+        <rect x="150" y="142" width="34" height="10" rx="2" fill="#282828"></rect>
+        <rect x="236" y="142" width="34" height="10" rx="2" fill="#282828"></rect>
       </g>
       <g class="ss-sat">
-        <rect x="332" y="188" width="8" height="26" rx="2" fill="#1c2430"></rect>
+        <rect x="332" y="188" width="8" height="26" rx="2" fill="#282828"></rect>
         <rect x="322" y="194" width="28" height="5" fill="url(#panelGrad)"></rect>
-        <circle cx="336" cy="214" r="3" fill="#f5b73c"></circle>
+        <circle cx="336" cy="214" r="3" fill="#fab283"></circle>
       </g>
     </svg>
     <div class="pillar-grid reveal">
